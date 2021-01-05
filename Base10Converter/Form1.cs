@@ -24,7 +24,22 @@ namespace Base10Converter
                 UInt64 base10 = Convert.ToUInt64(base10TextBox.Text);
                 Base10ToBinary(base10);
                 Base10ToOctal(base10);
+                Base10ToHex(base10);
             }
+        }
+
+        private void Base10ToHex(UInt64 base10)
+        {
+            string[] hexArray = new string[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
+
+            string hex = "";
+
+            do
+            {
+                hex = hexArray[base10 % 16] + hex;
+                base10 /= 16;
+            } while (base10 != 0);
+            hexTextBox.Text = hex;
         }
 
         /// <summary>
