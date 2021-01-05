@@ -22,9 +22,29 @@ namespace Base10Converter
             if (ValidInput(base10TextBox.Text))
             {
                 UInt64 base10 = Convert.ToUInt64(base10TextBox.Text);
-                //Base10ToBinary(base10);
+                Base10ToBinary(base10);
                 //Base10ToOctal(base10);
             }
+        }
+
+        /// <summary>
+        /// Converts the base10 number to binary
+        /// </summary>
+        /// <param name="base10">The number to be converted to binary</param>
+        private void Base10ToBinary(UInt64 base10)
+        {
+            UInt64 remainder = 0;
+
+            string binary = "";
+
+            do
+            {
+                remainder = base10 % 2;
+                base10 /= 2;
+                binary = remainder + binary;
+            } while (base10 > 0);
+
+            binaryTextBox.Text = binary;
         }
         private bool ValidInput(string base10)
         {
