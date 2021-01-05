@@ -23,7 +23,7 @@ namespace Base10Converter
             {
                 UInt64 base10 = Convert.ToUInt64(base10TextBox.Text);
                 Base10ToBinary(base10);
-                //Base10ToOctal(base10);
+                Base10ToOctal(base10);
             }
         }
 
@@ -45,6 +45,35 @@ namespace Base10Converter
             } while (base10 > 0);
 
             binaryTextBox.Text = binary;
+        }
+
+        /// <summary>
+        /// Converts the number to Octal
+        /// </summary>
+        /// <param name="base10">The number to be converted to Octal</param>
+        private void Base10ToOctal(UInt64 base10)
+        {
+            UInt64 i = ValueOfI(base10);
+
+            string octal = "";
+
+            do
+            {
+                octal += base10 / i;
+                base10 = base10 % i;
+                i /= 8;
+            } while (i != 0);
+            octalTextBox.Text = octal;
+        }
+
+        private UInt64 ValueOfI(UInt64 base10)
+        {
+            UInt64 i = 1;
+            while (i * 8 <= base10 && i * 8 != 0)
+            {
+                i *= 8;
+            }
+            return i;
         }
         private bool ValidInput(string base10)
         {
