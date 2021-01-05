@@ -28,8 +28,13 @@ namespace Base10Converter
             }
         }
 
+        /// <summary>
+        /// Converts the number to Hex
+        /// </summary>
+        /// <param name="base10">The number to be converted to Hex</param>
         private void Base10ToHex(UInt64 base10)
         {
+            // An array with all the values of hex
             string[] hexArray = new string[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
 
             string hex = "";
