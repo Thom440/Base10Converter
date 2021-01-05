@@ -16,5 +16,28 @@ namespace Base10Converter
         {
             InitializeComponent();
         }
+
+        private void ConvertButton_Click(object sender, EventArgs e)
+        {
+            if (ValidInput(base10TextBox.Text))
+            {
+                UInt64 base10 = Convert.ToUInt64(base10TextBox.Text);
+                //Base10ToBinary(base10);
+                //Base10ToOctal(base10);
+            }
+        }
+        private bool ValidInput(string base10)
+        {
+            try
+            {
+                Convert.ToUInt64(base10);
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("Entry must be a number");
+                return false;
+            }
+        }
     }
 }

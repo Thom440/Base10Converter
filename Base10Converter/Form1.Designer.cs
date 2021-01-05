@@ -96,6 +96,7 @@ namespace Base10Converter
             this.convertButton.TabIndex = 6;
             this.convertButton.Text = "Convert";
             this.convertButton.UseVisualStyleBackColor = true;
+            this.convertButton.Click += new System.EventHandler(this.ConvertButton_Click);
             // 
             // Form1
             // 
