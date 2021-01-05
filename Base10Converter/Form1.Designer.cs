@@ -51,7 +51,7 @@ namespace Base10Converter
             // 
             this.base10TextBox.Location = new System.Drawing.Point(80, 10);
             this.base10TextBox.Name = "base10TextBox";
-            this.base10TextBox.Size = new System.Drawing.Size(279, 20);
+            this.base10TextBox.Size = new System.Drawing.Size(433, 20);
             this.base10TextBox.TabIndex = 1;
             // 
             // label2
@@ -68,7 +68,7 @@ namespace Base10Converter
             this.binaryTextBox.Enabled = false;
             this.binaryTextBox.Location = new System.Drawing.Point(80, 48);
             this.binaryTextBox.Name = "binaryTextBox";
-            this.binaryTextBox.Size = new System.Drawing.Size(279, 20);
+            this.binaryTextBox.Size = new System.Drawing.Size(433, 20);
             this.binaryTextBox.TabIndex = 3;
             // 
             // label3
@@ -85,7 +85,7 @@ namespace Base10Converter
             this.octalTextBox.Enabled = false;
             this.octalTextBox.Location = new System.Drawing.Point(80, 79);
             this.octalTextBox.Name = "octalTextBox";
-            this.octalTextBox.Size = new System.Drawing.Size(279, 20);
+            this.octalTextBox.Size = new System.Drawing.Size(433, 20);
             this.octalTextBox.TabIndex = 5;
             // 
             // convertButton
@@ -103,7 +103,7 @@ namespace Base10Converter
             this.AcceptButton = this.convertButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 205);
+            this.ClientSize = new System.Drawing.Size(525, 205);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.octalTextBox);
             this.Controls.Add(this.label3);
