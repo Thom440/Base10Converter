@@ -55,7 +55,7 @@ namespace Base10Converter
             }
             catch
             {
-                MessageBox.Show("Entry must be a number");
+                MessageBox.Show("Entry must be a number between 0 and 18446744073709551615");
                 return false;
             }
         }
