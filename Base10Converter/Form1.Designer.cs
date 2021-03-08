@@ -35,7 +35,6 @@ namespace Base10Converter
             this.binaryTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.octalTextBox = new System.Windows.Forms.TextBox();
-            this.convertButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.hexTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -55,6 +54,7 @@ namespace Base10Converter
             this.base10TextBox.Name = "base10TextBox";
             this.base10TextBox.Size = new System.Drawing.Size(433, 20);
             this.base10TextBox.TabIndex = 1;
+            this.base10TextBox.TextChanged += new System.EventHandler(this.Base10TextBox_TextChanged);
             // 
             // label2
             // 
@@ -90,16 +90,6 @@ namespace Base10Converter
             this.octalTextBox.Size = new System.Drawing.Size(433, 20);
             this.octalTextBox.TabIndex = 5;
             // 
-            // convertButton
-            // 
-            this.convertButton.Location = new System.Drawing.Point(80, 167);
-            this.convertButton.Name = "convertButton";
-            this.convertButton.Size = new System.Drawing.Size(143, 55);
-            this.convertButton.TabIndex = 6;
-            this.convertButton.Text = "Convert";
-            this.convertButton.UseVisualStyleBackColor = true;
-            this.convertButton.Click += new System.EventHandler(this.ConvertButton_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -119,13 +109,11 @@ namespace Base10Converter
             // 
             // Form1
             // 
-            this.AcceptButton = this.convertButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 266);
+            this.ClientSize = new System.Drawing.Size(525, 166);
             this.Controls.Add(this.hexTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.convertButton);
             this.Controls.Add(this.octalTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.binaryTextBox);
@@ -147,7 +135,6 @@ namespace Base10Converter
         private System.Windows.Forms.TextBox binaryTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox octalTextBox;
-        private System.Windows.Forms.Button convertButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox hexTextBox;
     }

@@ -17,17 +17,6 @@ namespace Base10Converter
             InitializeComponent();
         }
 
-        private void ConvertButton_Click(object sender, EventArgs e)
-        {
-            if (ValidInput(base10TextBox.Text))
-            {
-                UInt64 base10 = Convert.ToUInt64(base10TextBox.Text);
-                Base10ToBinary(base10);
-                Base10ToOctal(base10);
-                Base10ToHex(base10);
-            }
-        }
-
         /// <summary>
         /// Converts the number to Hex
         /// </summary>
@@ -104,8 +93,23 @@ namespace Base10Converter
             }
             catch
             {
+                if (base10 == string.Empty)
+                {
+                    return false;
+                }
                 MessageBox.Show("Entry must be a number between 0 and 18446744073709551615");
                 return false;
+            }
+        }
+
+        private void Base10TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (ValidInput(base10TextBox.Text))
+            {
+                UInt64 base10 = Convert.ToUInt64(base10TextBox.Text);
+                Base10ToBinary(base10);
+                Base10ToOctal(base10);
+                Base10ToHex(base10);
             }
         }
     }
