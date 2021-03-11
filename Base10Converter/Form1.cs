@@ -95,6 +95,9 @@ namespace Base10Converter
             {
                 if (base10 == string.Empty)
                 {
+                    binaryTextBox.Text = string.Empty;
+                    hexTextBox.Text = string.Empty;
+                    octalTextBox.Text = string.Empty;
                     return false;
                 }
                 MessageBox.Show("Entry must be a number between 0 and 18446744073709551615");
